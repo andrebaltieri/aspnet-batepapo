@@ -10,7 +10,11 @@ namespace Todos.Controllers
         [HttpGet]
         public TodoItem Get()
         {
-            return new TodoItem();
+            var todo = new TodoItem();
+            todo.User = "Renan";
+            todo.Id = 20;
+            todo.Text = "Fizemos deploy no Azure!";
+            return todo;
         }
 
         [Route("{id}")]
